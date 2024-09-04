@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/logo.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite + Vue + TS</title>
+  </head>
+  <style>
+    .fs-loading-box {
+      animation: fs-loading 2s linear infinite;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+    }
+
+    .fs-loading-item {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+    }
+
+    .fs-pos-a{
+      position: absolute;
+    }
+
+    .fs-pos-y-t{
+      top: 0;
+    }
+
+    .fs-pos-y-b{
+      bottom: 0;
+    }
+
+    .fs-pos-x-l{
+      left: 0;
+    }
+
+    .fs-pos-x-r{
+      right: 0;
+    }
+
+    @keyframes fs-loading {
+      0% {
+        transform: translate(-50%, -50%) rotate(0deg);
+        width: 200px;
+        height: 200px;
+      }
+      50% {
+        transform: translate(-50%, -50%) rotate(360deg);
+        width: 120px;
+        height: 120px;
+      }
+      100% {
+        transform: translate(-50%, -50%) rotate(720deg);
+        width: 200px;
+        height: 200px;
+      }
+    }
+
+    .fs-bg-blue {
+      background-color: #00f;
+    }
+
+    .fs-bg-yellow {
+      background-color: #ff0;
+    }
+
+    .fs-bg-green {
+      background-color: #0f0;
+    }
+
+    .fs-bg-red {
+      background-color: red;
+    }
+
+    /* .text{
+      color: red;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 2;
+    } */
+  </style>
+  <body>
+    <div id="app">
+      <div class="fs-loading-box">
+        <div class="fs-pos-a fs-pos-y-t fs-pos-x-l fs-loading-item fs-bg-red"></div>
+        <div class="fs-pos-a fs-pos-y-t fs-pos-x-r fs-loading-item fs-bg-blue"></div>
+        <div class="fs-pos-a fs-pos-y-b fs-pos-x-l fs-loading-item fs-bg-yellow"></div>
+        <div class="fs-pos-a fs-pos-y-b fs-pos-x-r fs-loading-item fs-bg-green"></div>
+      </div>
+      <!-- <div class="text">
+        zdm
+      </div> -->
+    </div>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
